@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  text-align: center;
+  max-width: 600px;
+}
+header {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: lightgray 1px solid;
+}
+h1,
+h2 {
+  font-weight: normal;
+}
+h2 {
+  color: #006eb6;
+  font-size: 0.8em;
+  margin-bottom: 2px;
+}
+.logo {
+  width: 150px;
+}
+
+main {
+  text-align: left;
+  line-height: 1.5;
+  margin: 60px auto;
+}
+#list-title {
+  font-style: italic;
+}
+
+li {
+  margin-bottom: 20px;
+}
