@@ -117,3 +117,39 @@ footer {
 footer p {
   margin: 5px 300px;
 }
+
+/*-------------------------------Modal-------------------------------------*/
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+dialog img {
+  width: 90%;
+  max-height: 80vh;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
+.modal.hidden {
+  display: none;
+}
