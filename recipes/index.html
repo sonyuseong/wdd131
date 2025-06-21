@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Card</title>
+
+    <link
+      rel="preload"
+      href="recipes.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <meta name="description" content="CardNumber input form" />
+    <meta name="author" content="Yuseong Son" />
+
+    <meta property="og:title" content="Bibimbap" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Recipie for Bibimbap" />
+    <meta
+      property="og:image"
+      content="https://sonyuseong.github.io/wdd131//recipes/images/bibimbab.jfif"
+    />
+    <meta
+      property="og:url"
+      content="https://sonyuseong.github.io/wdd131/recipes/index.html   "
+    />
+    <meta
+      name="twitter:card"
+      content="https://sonyuseong.github.io/wdd131/recipes/images/bibimbab.jfif"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <script src="recipes.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="images/recipe-book.png"
+        alt="RECIPE BOOK LOGO"
+        width="96px"
+        height="96px"
+      />
+      <h1>RECIPEBOOK</h1>
+      <form class="search" action="#" id="searchForm">
+        <input name="searchKeyword" type="text" placeholder="Find a Recipe" />
+        <button type="submit" aria-label="search Button">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </header>
+    <main id="recipes">
+      <article>
+        <figure class="food-img">
+          <img
+            src="images/bibimbab.jfif"
+            alt="#"
+            width="300px"
+            height="200px"
+          />
+        </figure>
+        <section class="food-data">
+          <div class="tags"></div>
+          <div class="food-title">
+            <p class="food-name">Bibimbap</p>
+          </div>
+          <p class="recipe-description">
+            Bibimbap is a Korean dish that consists of various vegetables and
+            sauce mixed together with rice. Depending on personal preference,
+            people can choose their favorite ingredients to enjoy with the rice.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <div class="social">
+        <a href="#"
+          ><img
+            src="images/instagram_icon.svg"
+            width="64px"
+            height="64px"
+            alt="instagram icon"
+        /></a>
+        <a href="#"
+          ><img
+            src="images/youtube_icon.svg"
+            width="64px"
+            height="64px"
+            alt="youtube icon"
+        /></a>
+        <a href="#"
+          ><img
+            src="images/pinterest_icon.svg"
+            width="64px"
+            height="64px"
+            alt="pinterest icon"
+        /></a>
+      </div>
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons"
+        >Recipe icons created by Freepik - Flaticon</a
+      >
+    </footer>
+  </body>
+</html>
