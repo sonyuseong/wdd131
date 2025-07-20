@@ -1,0 +1,536 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  background-color: #c9cba3;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+/*------------------header ------------------------ */
+header {
+  background-color: #ffe1a8c2;
+  font-family: "Carter One", serif;
+  display: grid;
+  grid-template-columns: 1fr 20% 1fr;
+  width: 100%;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  padding: 35px;
+  margin: 0 auto;
+}
+
+nav a:hover {
+  background-color: #a7c957;
+  color: black;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#logo-link {
+  width: 100px;
+  height: 100px;
+  padding-top: 5px;
+  justify-self: center;
+  align-self: center;
+}
+
+.icon {
+  width: 80px;
+}
+
+#icon-link {
+  padding-top: 10px;
+  justify-self: right;
+
+  margin-right: 30px;
+}
+
+/*------------------hero ------------------------ */
+
+#hero {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#hero-box {
+  grid-column: 1/4;
+  grid-row: 1/4;
+  z-index: 1;
+}
+
+#hero-msg {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  z-index: 2;
+}
+#hero-msg a {
+  text-decoration: none;
+}
+
+#hero-img {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#hero-img:hover {
+  filter: brightness(70%);
+}
+
+#hero-msg p {
+  color: black;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+#hero-msg h4 {
+  color: black;
+  font-size: 2em;
+  font-family: "Carter One", serif;
+  margin-top: 50px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+/*------------------main ------------------------ */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 100%;
+  align-items: stretch;
+  margin-top: 30px;
+}
+
+.home-grid section {
+  justify-items: center;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px auto;
+  background-color: #e26d5c;
+}
+
+.home-grid h5 {
+  font-family: "Carter One", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+.home-grid p {
+  font-family: "Carter One", serif;
+  font-size: 1em;
+  margin-top: 3px;
+  margin-bottom: 30px;
+  max-width: 210px;
+}
+
+/*------------------footer ------------------------ */
+footer {
+  background-color: #ffe1a8;
+  color: black;
+  padding: 25px 50px;
+  margin-top: 200px;
+  border-radius: 10px;
+  font-family: "Carter One", serif;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#footer-logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 200px;
+  height: 150px;
+}
+
+.info-footer {
+  color: #302d2d;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#footer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: black;
+}
+
+footer p {
+  font-size: 1.2em;
+}
+footer p a:hover {
+  text-decoration: underline;
+}
+
+footer .social img {
+  padding-top: 15px;
+}
+
+/*------------------modal ------------------------ */
+/* Style the Image Used to Trigger the Modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  z-index: 999;
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1600px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/*------------------------------------------- detail design ------------------------------------------- */
+
+/*------------------------- hero ----------------------------*/
+#hero-detail {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#hero-box-detail {
+  grid-column: 1/4;
+  grid-row: 1/4;
+  z-index: 1;
+}
+
+#hero-msg-detail {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  z-index: 2;
+}
+
+#hero-img-detail {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#hero-msg-detail h1 {
+  color: white;
+  font-size: 3em;
+  font-family: "Carter One", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/*------------------------- genre ----------------------------*/
+
+#detail section {
+  border: 1px black solid;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#detail-genre {
+}
+
+#detail-genre p {
+  display: inline-block;
+  background-color: #ffe1a8;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px 14px;
+  border-radius: 5px;
+  margin: 10px 15px;
+}
+
+/*------------------------- rating ----------------------------*/
+.button-style {
+  background-color: #ffe1a8;
+
+  padding: 7px 14px;
+  margin: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#detail-rating p,
+#detail-rating img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#detail-rating img {
+  width: 30px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#detail-rating p {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+/*------------------------- synopsis ----------------------------*/
+
+#detail-synopsis h1 {
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#logo-detail {
+  width: 100px;
+  margin-right: 20px;
+}
+
+/*------------------------- platform ----------------------------*/
+#detail-platform div {
+  display: flex;
+  align-items: center;
+}
+#detail-platform img {
+  border-radius: 5px;
+  width: 70px;
+}
+
+/*------------------------- gallery ----------------------------*/
+#gallery-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  justify-items: center;
+}
+
+#detail-gallery img {
+  width: 90%;
+  height: 350px;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+.modal-img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-img:hover {
+  filter: brightness(70%);
+}
+
+#gallery-box1 {
+  grid-column-start: 1;
+}
+#gallery-box2 {
+  grid-column-start: 2;
+}
+#gallery-box3 {
+  grid-column-start: 3;
+}
+
+/*------------------------------------------------ searching page -----------------------------------------------*/
+
+#genre-box,
+#title-searching-box {
+  border: 1px black solid;
+  background-color: #ffe1a8;
+  font-weight: bold;
+  padding: 7px 14px;
+  margin: 10px 15px;
+  border-radius: 5px;
+}
+/*------------------------- genre box ----------------------------*/
+#genre-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.genre_button {
+  background-color: #e26d5c;
+  font-weight: bold;
+  padding: 7px 14px;
+  margin: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.genre_button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.searching-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#genre-searching-bar {
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  font-size: 1em;
+}
+.searching-bar a img {
+  width: 30px;
+  height: 30px;
+}
+
+#genre-result-box h4 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#genre-result-box p {
+  font-size: 0.8em;
+}
+
+#main-searching-bar {
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.title-searching-result {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0;
+}
+
+.title-searching-result img {
+  width: 100px;
+  height: auto;
+}
+
+.text-group {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 60%;
+}
+.text-group p {
+  margin: 0;
+  text-align: left;
+  font-size: 0.9em;
+}
+.text-group a {
+  text-decoration: none;
+  color: inherit;
+}
+.text-group p:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-size: 1.3em;
+}
+.text-group p:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.text-group p:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+/*------------------------- gallery ----------------------------*/
+/*------------------------- gallery ----------------------------*/
+/*------------------------- gallery ----------------------------*/
+/*------------------------- gallery ----------------------------*/
+/*------------------------- gallery ----------------------------*/
+/*------------------------- gallery ----------------------------*/

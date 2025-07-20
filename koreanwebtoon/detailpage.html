@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>details</title>
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="searchingpage.html">search</a>
+          <a href="detailpage.html">details</a>
+        </nav>
+        <a id="logo-link" href="index.html">
+          <img class="logo" src="images/weboon_logo.png" alt="logo" />
+        </a>
+        <a id="icon-link" href="searchingpage.html">
+          <img
+            class="icon"
+            src="images/searching_icon.png"
+            alt="searching icon"
+          />
+        </a>
+      </header>
+      <div id="hero-detail">
+  <div id="hero-box-detail">
+    <img
+      id="hero-img-detail"
+      class="modal-img"
+      src="images/solo_detail.webp"
+      alt="Solo Leveling"
+    />
+    <h1 class="hero-title">Solo Leveling</h1>
+  </div>
+</div>
+      <main id="detail">
+        <section id="detail-genre">
+          <p>#fantasy</p>
+          <p>#action</p>
+        </section>
+        <section id="detail-rating">
+          <div class="button-style">
+            <p>Rating:</p>
+            <img src="images/star.png" alt="star" />
+            <img src="images/star.png" alt="star" />
+            <img src="images/star.png" alt="star" />
+            <img src="images/star.png" alt="star" />
+            <img src="images/star.png" alt="star" />
+          </div>
+        </section>
+        <section id="detail-synopsis">
+          <div class="button-style">
+            <h1>Solo Leveling</h1>
+            <p>
+              Solo Leveling is a Korean web novel and webtoon that follows Sung
+              Jin-Woo, the weakest hunter in a world where humans battle
+              monsters in mysterious dungeons. One day, after a deadly dungeon
+              raid, he gains a unique ability to "level up" like a game
+              character, becoming stronger without limits. As he rises from the
+              weakest to the most powerful, he uncovers hidden truths about the
+              dungeons, the world, and his own destiny.
+            </p>
+          </div>
+        </section>
+        <section id="detail-platform">
+          <div class="button-style">
+            <img
+              id="logo-detail"
+              src="images/webnovel_logo.jfif"
+              alt="webtoon_logo"
+            />
+            <a
+              href="https://www.webnovel.com/comic/solo-leveling(only-i-level-up)_15227640605485101/000-only-i-level-up_45196186038101142"
+              >Read Episode 1</a
+            >
+          </div>
+        </section>
+        <section id="detail-gallery">
+          <div class="button-style">
+            <div id="gallery-box">
+              <img
+                class="modal-img"
+                id="gallery-box1"
+                src="images/solo-1.jpeg"
+                alt="solo-1"
+                loading="lazy"
+              />
+              <img
+                class="modal-img"
+                id="gallery-box2"
+                src="images/solo-2.jpg"
+                alt="solo-2"
+                loading="lazy"
+              />
+              <img
+                class="modal-img"
+                id="gallery-box3"
+                src="images/solo-3.jpg"
+                alt="solo-3"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <section class="link-footer">
+          <p id="footer-logo">
+            <a href="index.html">
+              <img src="images/weboon_logo.png" alt="logo" />
+            </a>
+          </p>
+          <p><a href="site-plan.html">Site Plan</a></p>
+          <p><a href="searchingpage.html">search</a></p>
+          <p><a href="deatailpage.html">details</a></p>
+          <div class="social">
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="fb icon" loading="lazy"/>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="images/twitter.png" alt="twitter icon" loading="lazy"/>
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="instagram icon" loading="lazy"/>
+            </a>
+          </div>
+        </section>
+        <section class="info-footer">
+          <p>Korean Webtoon &copy; 2025 - Yuseong Son</p>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+        </section>
+      </footer>
+    </div>
+    <!-- 모달을 적용하고 싶은 이미지들 -->
+
+    <!-- 모달 구조 (공통) -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" alt="#" src="#" />
+      <div id="caption"></div>
+    </div>
+    <script>
+      // 모든 modal-img 클래스를 가진 이미지 선택
+      const images = document.querySelectorAll(".modal-img");
+      const modal = document.getElementById("myModal");
+      const modalImg = document.getElementById("img01");
+      const captionText = document.getElementById("caption");
+      const closeBtn = document.querySelector(".close");
+
+      // 각각의 이미지에 클릭 이벤트 등록
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "block";
+          modalImg.src = img.src;
+          captionText.textContent = img.alt;
+        });
+      });
+
+      // 닫기 버튼 클릭 시
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      // 모달 외부 클릭 시 닫기
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+
+      // ESC 키로 닫기
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Korean Webtoon Yuseopng Son</title>
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="searchingpage.html">search</a>
+          <a href="detailpage.html">details</a>
+        </nav>
+        <a id="logo-link" href="index.html">
+          <img class="logo" src="images/weboon_logo.png" alt="logo" />
+        </a>
+        <a id="icon-link" href="searchingpage.html">
+          <img
+            class="icon"
+            src="images/searching_icon.png"
+            alt="searching icon"
+          />
+        </a>
+      </header>
+      <div id="hero">
+        <div id="hero-box">
+          <img id="hero-img" src="images/solo_main.jpg" alt="Solo Leveling" />
+        </div>
+        <section id="hero-msg">
+          <a href="detailpage.html">
+            <h4>Solo Leveling</h4>
+            <p>#Action #Fantasy</p>
+          </a>
+        </section>
+      </div>
+      <main class="home-grid">
+        <section>
+          <h5>#Fantasy</h5>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/reader_main.jpg"
+              alt="fantasy1"
+            />
+          </a>
+          <p>Omniscient Reader</p>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/Monarch_main.jpg"
+              alt="fantasy2"
+            />
+          </a>
+          <p>Becoming the Monarch</p>
+        </section>
+        <section>
+          <h5>#Action</h5>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/Teenage_main.jpg"
+              alt="action1"
+            />
+          </a>
+          <p>Teenage Mercenary</p>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/regressed_main.jpg"
+              alt="action2"
+            />
+          </a>
+          <p>The Regressed Mercenary Has a Plan</p>
+        </section>
+        <section>
+          <h5>#Romance</h5>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/remarried_main.jpg"
+              alt="romance1"
+            />
+          </a>
+          <p>The Remarried Empress</p>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/price_main.jpg"
+              alt="romance2"
+            />
+          </a>
+          <p>The Price is Your Everything</p>
+        </section>
+        <section>
+          <h5>#Drama</h5>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/estate_main.jpg"
+              alt="drama1"
+            />
+          </a>
+          <p>The Greatest Estate Developer</p>
+          <a href="detailpage.html">
+            <img
+              class="ranking-img"
+              src="images/reborn_main.jpg"
+              alt="drama2"
+            />
+          </a>
+          <p>Reborn Rich</p>
+        </section>
+      </main>
+      <footer>
+        <section class="link-footer">
+          <p id="footer-logo">
+            <a href="index.html">
+              <img src="images/weboon_logo.png" alt="logo" />
+            </a>
+          </p>
+          <p><a href="site-plan.html">Site Plan</a></p>
+          <p><a href="searchingpage.html">search</a></p>
+          <p><a href="deatailpage.html">details</a></p>
+          <div class="social">
+            <a href="https://facebook.com" target="_blank">
+              <img src="images/facebook.png" alt="fb icon" />
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="images/twitter.png" alt="twitter icon" />
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/instagram.png" alt="instagram icon" />
+            </a>
+          </div>
+        </section>
+        <section class="info-footer">
+          <p>Korean Webtoon &copy; 2025 - Yuseong Son</p>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+        </section>
+      </footer>
+    </div>
+    <!-- Trigger the Modal -->
+    <img
+      id="myImg"
+      src="img_snow.jpg"
+      alt="Snow"
+      style="width: 100%; max-width: 300px"
+    />
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01" src="#" alt="#" />
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var img = document.getElementById("hero-img");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      };
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
